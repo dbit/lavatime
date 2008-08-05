@@ -27,6 +27,8 @@ ruby script/server
 # In your browser, go to http://localhost:3000/
 
 # Install Rspec
+# From: http://github.com/dchelimsky/rspec-rails/wikis/home
+
 cd vendor/plugins
 git clone git://github.com/dchelimsky/rspec.git
 git clone git://github.com/dchelimsky/rspec-rails.git
@@ -40,4 +42,17 @@ rm -rf rspec-rails/.git
 cd ../../
 script/generate rspec
 
+# Check it back into your local git repository.
+git add .
+gc -m 'Checking in RSpec plugin'
 
+# Upload it to the origin server.
+git push origin master
+
+# Installing restful_authentication
+# For a tutorial on how to use it: http://railscasts.com/episodes/67
+
+cd vendor/plugins
+git clone git://github.com/technoweenie/restful-authentication.git
+cd restful-authentication
+git checkout 
