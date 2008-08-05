@@ -1,7 +1,30 @@
 # Download Rails 2.1
+
 sudo gem install rails
 
 # Generate a default rails 2.1 application
+
 rails lava_time
 
 # Using the built-in code generators make a time_entry table.
+
+script/generate scaffold TimeEntry start_time:datetime end_time:datetime
+
+# Update the database.
+
+rake db:migrate
+
+# Remove the default index page, because direct requests to index.html have higher priority over Rails's routing system.  (This priority is defined in /public/.htaccess )
+
+mv public/index.html public/index.html.default
+
+# Modify the default route in routes.rb
+  map.root :controller => "time_entries"
+
+# Start your server.
+ruby script/server
+
+# In your browser, go to http://localhost:3000/
+
+
+

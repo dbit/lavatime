@@ -1,0 +1,646 @@
+  [4;36;1mSQL (0.002493)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000828)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (0.009026)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (0.006610)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.001285)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.001669)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateTimeEntries (20080805081753)
+  [4;36;1mSQL (0.000698)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.013746)[0m   [0mCREATE TABLE "time_entries" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "start_time" datetime DEFAULT NULL NULL, "end_time" datetime DEFAULT NULL NULL, "created_at" datetime DEFAULT NULL NULL, "updated_at" datetime DEFAULT NULL NULL) [0m
+  [4;36;1mSQL (0.009271)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20080805081753')[0m
+  [4;35;1mSQL (0.001241)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.001433)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000877)[0m   [0mPRAGMA index_list("time_entries")[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2008-08-05 01:24:38) [GET]
+  Session ID: 540774103f6902da5cbd4cf3e3a82093
+  Parameters: {}
+
+
+ActionController::RoutingError (No route matches "/" with {:method=>:get}):
+    /opt/local/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/routing/recognition_optimisation.rb:67:in `recognize_path'
+    /opt/local/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/routing/route_set.rb:384:in `recognize'
+    /opt/local/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:148:in `handle_request'
+    /opt/local/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:107:in `dispatch'
+    /opt/local/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:104:in `synchronize'
+    /opt/local/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:104:in `dispatch'
+    /opt/local/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:120:in `dispatch_cgi'
+    /opt/local/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:35:in `dispatch'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.3/bin/../lib/mongrel/rails.rb:76:in `process'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.3/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.3/bin/../lib/mongrel/rails.rb:74:in `process'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:159:in `process_client'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:158:in `each'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:158:in `process_client'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:285:in `run'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:285:in `initialize'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:285:in `new'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:285:in `run'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:268:in `initialize'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:268:in `new'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:268:in `run'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.3/lib/mongrel/configurator.rb:282:in `run'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.3/lib/mongrel/configurator.rb:281:in `each'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.3/lib/mongrel/configurator.rb:281:in `run'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.3/bin/mongrel_rails:128:in `run'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.3/lib/mongrel/command.rb:212:in `run'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.3/bin/mongrel_rails:281
+    /opt/local/lib/ruby/gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:502:in `load'
+    /opt/local/lib/ruby/gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:502:in `load'
+    /opt/local/lib/ruby/gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:354:in `new_constants_in'
+    /opt/local/lib/ruby/gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:502:in `load'
+    /opt/local/lib/ruby/gems/1.8/gems/rails-2.1.0/lib/commands/servers/mongrel.rb:64
+    /opt/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /opt/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    /opt/local/lib/ruby/gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:509:in `require'
+    /opt/local/lib/ruby/gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:354:in `new_constants_in'
+    /opt/local/lib/ruby/gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:509:in `require'
+    /opt/local/lib/ruby/gems/1.8/gems/rails-2.1.0/lib/commands/server.rb:39
+    /opt/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /opt/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:3
+
+Rendering /opt/local/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/templates/rescues/layout.erb (not_found)
+
+
+Processing TimeEntriesController#index (for 127.0.0.1 at 2008-08-05 01:26:44) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--a5441accb5aee623bb6e93cb68edbe7b309d2bc3
+  Parameters: {"action"=>"index", "controller"=>"time_entries"}
+  [4;36;1mTimeEntry Load (0.001725)[0m   [0;1mSELECT * FROM "time_entries" [0m
+Rendering template within layouts/time_entries
+Rendering time_entries/index
+Completed in 0.03049 (32 reqs/sec) | Rendering: 0.01012 (33%) | DB: 0.00172 (5%) | 200 OK [http://localhost/]
+
+
+Processing TimeEntriesController#new (for 127.0.0.1 at 2008-08-05 01:35:18) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--a5441accb5aee623bb6e93cb68edbe7b309d2bc3
+  Parameters: {"action"=>"new", "controller"=>"time_entries"}
+Rendering template within layouts/time_entries
+Rendering time_entries/new
+Completed in 0.20926 (4 reqs/sec) | Rendering: 0.18569 (88%) | DB: 0.00000 (0%) | 200 OK [http://localhost/time_entries/new]
+
+
+Processing TimeEntriesController#index (for 127.0.0.1 at 2008-08-05 01:38:52) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlODFmOGY0OTdiNDEwY2FjODY3MTc4OTVjMWVjYjJl
+MTciCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--f72e148efb3a23ce73057ef21e84b07d4bd47c5f
+  Parameters: {"action"=>"index", "controller"=>"time_entries"}
+  [4;35;1mTimeEntry Load (0.001362)[0m   [0mSELECT * FROM "time_entries" [0m
+Rendering template within layouts/time_entries
+Rendering time_entries/index
+Completed in 0.32627 (3 reqs/sec) | Rendering: 0.00712 (2%) | DB: 0.00136 (0%) | 200 OK [http://localhost/]
+  [4;36;1mTimeEntry Load (0.002076)[0m   [0;1mSELECT * FROM "time_entries" [0m
+  [4;35;1mTimeEntry Create (0.003223)[0m   [0mINSERT INTO "time_entries" ("updated_at", "start_time", "end_time", "created_at") VALUES('2008-08-05 09:37:59', NULL, NULL, '2008-08-05 09:37:59')[0m
+  [4;36;1mTimeEntry Load (0.001456)[0m   [0;1mSELECT * FROM "time_entries" [0m
+  [4;35;1mTimeEntry Create (0.021772)[0m   [0mINSERT INTO "time_entries" ("updated_at", "start_time", "end_time", "created_at") VALUES('2008-08-05 09:38:37', NULL, NULL, '2008-08-05 09:38:37')[0m
+  [4;36;1mTimeEntry Load (0.001673)[0m   [0;1mSELECT * FROM "time_entries" [0m
+
+
+Processing TimeEntriesController#index (for 127.0.0.1 at 2008-08-05 02:40:22) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlODFmOGY0OTdiNDEwY2FjODY3MTc4OTVjMWVjYjJl
+MTciCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--f72e148efb3a23ce73057ef21e84b07d4bd47c5f
+  Parameters: {"action"=>"index", "controller"=>"time_entries"}
+  [4;36;1mTimeEntry Load (0.002376)[0m   [0;1mSELECT * FROM "time_entries" [0m
+Rendering template within layouts/time_entries
+Rendering time_entries/index
+
+
+ActionView::TemplateError (time_entry_url failed to generate from {:action=>"show", :controller=>"time_entries"} - you may have ambiguous routes, or you may need to supply additional parameters for this route.  content_url has the following required parameters: ["time_entries", :id] - are they all satisfied?) on line #24 of time_entries/index.html.erb:
+21: 
+22: <br />
+23: 
+24: <%= link_to 'Start', time_entry_path, :method => :POST %>
+
+    /opt/local/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/routing/route_set.rb:379:in `raise_named_route_error'
+    /opt/local/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/routing/route_set.rb:339:in `generate'
+    /opt/local/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/url_rewriter.rb:131:in `rewrite_path'
+    /opt/local/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/url_rewriter.rb:110:in `rewrite_url'
+    /opt/local/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/url_rewriter.rb:88:in `rewrite'
+    /opt/local/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:621:in `url_for'
+    /opt/local/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_view/helpers/url_helper.rb:71:in `send'
+    /opt/local/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_view/helpers/url_helper.rb:71:in `url_for'
+    (eval):17:in `time_entry_path'
+    app/views/time_entries/index.html.erb:24:in `_run_erb_47app47views47time_entries47index46html46erb'
+    /opt/local/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_view/base.rb:338:in `send'
+    /opt/local/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_view/base.rb:338:in `execute'
+    /opt/local/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_view/template_handlers/compilable.rb:29:in `send'
+    /opt/local/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_view/template_handlers/compilable.rb:29:in `render'
+    /opt/local/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_view/template.rb:35:in `render'
+    /opt/local/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_view/template.rb:22:in `render_template'
+    /opt/local/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_view/base.rb:245:in `render_file'
+    /opt/local/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:1108:in `render_for_file'
+    /opt/local/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:865:in `render_with_no_layout'
+    /opt/local/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:880:in `render_with_no_layout'
+    /opt/local/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/layout.rb:251:in `render_without_benchmark'
+    /opt/local/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/benchmarking.rb:51:in `render'
+    /opt/local/lib/ruby/gems/1.8/gems/activesupport-2.1.0/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    /opt/local/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/benchmarking.rb:51:in `render'
+    /opt/local/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/mime_responds.rb:131:in `send'
+    /opt/local/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/mime_responds.rb:131:in `custom'
+    /opt/local/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/mime_responds.rb:160:in `call'
+    /opt/local/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/mime_responds.rb:160:in `respond'
+    /opt/local/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/mime_responds.rb:154:in `each'
+    /opt/local/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/mime_responds.rb:154:in `respond'
+    /opt/local/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/mime_responds.rb:107:in `respond_to'
+    app/controllers/time_entries_controller.rb:7:in `index'
+    /opt/local/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:1162:in `send'
+    /opt/local/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:1162:in `perform_action_without_filters'
+    /opt/local/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/filters.rb:580:in `call_filters'
+    /opt/local/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/filters.rb:573:in `perform_action_without_benchmark'
+    /opt/local/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /opt/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /opt/local/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /opt/local/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/rescue.rb:201:in `perform_action_without_caching'
+    /opt/local/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    /opt/local/lib/ruby/gems/1.8/gems/activerecord-2.1.0/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    /opt/local/lib/ruby/gems/1.8/gems/activerecord-2.1.0/lib/active_record/query_cache.rb:8:in `cache'
+    /opt/local/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /opt/local/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:529:in `send'
+    /opt/local/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:529:in `process_without_filters'
+    /opt/local/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/filters.rb:569:in `process_without_session_management_support'
+    /opt/local/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/session_management.rb:130:in `process'
+    /opt/local/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:389:in `process'
+    /opt/local/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:149:in `handle_request'
+    /opt/local/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:107:in `dispatch'
+    /opt/local/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:104:in `synchronize'
+    /opt/local/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:104:in `dispatch'
+    /opt/local/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:120:in `dispatch_cgi'
+    /opt/local/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:35:in `dispatch'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.3/lib/mongrel/rails.rb:76:in `process'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.3/lib/mongrel/rails.rb:74:in `synchronize'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.3/lib/mongrel/rails.rb:74:in `process'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:159:in `process_client'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:158:in `each'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:158:in `process_client'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:285:in `run'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:285:in `initialize'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:285:in `new'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:285:in `run'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:268:in `initialize'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:268:in `new'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:268:in `run'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.3/lib/mongrel/configurator.rb:282:in `run'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.3/lib/mongrel/configurator.rb:281:in `each'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.3/lib/mongrel/configurator.rb:281:in `run'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.3/bin/mongrel_rails:128:in `run'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.3/lib/mongrel/command.rb:212:in `run'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.3/bin/mongrel_rails:281
+    /opt/local/lib/ruby/gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:502:in `load'
+    /opt/local/lib/ruby/gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:502:in `load'
+    /opt/local/lib/ruby/gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:354:in `new_constants_in'
+    /opt/local/lib/ruby/gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:502:in `load'
+    /opt/local/lib/ruby/gems/1.8/gems/rails-2.1.0/lib/commands/servers/mongrel.rb:64
+    /opt/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /opt/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    /opt/local/lib/ruby/gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:509:in `require'
+    /opt/local/lib/ruby/gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:354:in `new_constants_in'
+    /opt/local/lib/ruby/gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:509:in `require'
+    /opt/local/lib/ruby/gems/1.8/gems/rails-2.1.0/lib/commands/server.rb:39
+    /opt/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /opt/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:3
+
+Rendering /opt/local/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing TimeEntriesController#index (for 127.0.0.1 at 2008-08-05 02:40:51) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlODFmOGY0OTdiNDEwY2FjODY3MTc4OTVjMWVjYjJl
+MTciCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--f72e148efb3a23ce73057ef21e84b07d4bd47c5f
+  Parameters: {"action"=>"index", "controller"=>"time_entries"}
+  [4;35;1mTimeEntry Load (0.002226)[0m   [0mSELECT * FROM "time_entries" [0m
+Rendering template within layouts/time_entries
+Rendering time_entries/index
+Completed in 0.04746 (21 reqs/sec) | Rendering: 0.02562 (53%) | DB: 0.00223 (4%) | 200 OK [http://localhost/]
+
+
+Processing TimeEntriesController#create (for 127.0.0.1 at 2008-08-05 02:40:57) [POST]
+  Session ID: BAh7BzoMY3NyZl9pZCIlODFmOGY0OTdiNDEwY2FjODY3MTc4OTVjMWVjYjJl
+MTciCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--f72e148efb3a23ce73057ef21e84b07d4bd47c5f
+  Parameters: {"authenticity_token"=>"7d6b6d2f55b2b83b2400b31feab49d85929b0c4b", "_method"=>"POST", "action"=>"create", "controller"=>"time_entries"}
+  [4;36;1mTimeEntry Create (0.001788)[0m   [0;1mINSERT INTO "time_entries" ("updated_at", "start_time", "end_time", "created_at") VALUES('2008-08-05 09:40:57', '2008-08-05 09:40:57', NULL, '2008-08-05 09:40:57')[0m
+Redirected to http://localhost:3000/time_entries
+Completed in 0.04927 (20 reqs/sec) | DB: 0.00179 (3%) | 302 Found [http://localhost/time_entries]
+
+
+Processing TimeEntriesController#index (for 127.0.0.1 at 2008-08-05 02:40:57) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlODFmOGY0OTdiNDEwY2FjODY3MTc4OTVjMWVjYjJl
+MTciCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7BjoLbm90aWNlIihUaW1lRW50cnkgd2FzIHN1Y2Nlc3NmdWxseSBjcmVh
+dGVkLgY6CkB1c2VkewY7B0Y=--455b92784d5e0545163a0287024c2b3acd8e5d47
+  Parameters: {"action"=>"index", "controller"=>"time_entries"}
+  [4;35;1mTimeEntry Load (0.003570)[0m   [0mSELECT * FROM "time_entries" [0m
+Rendering template within layouts/time_entries
+Rendering time_entries/index
+Completed in 0.03733 (26 reqs/sec) | Rendering: 0.01536 (41%) | DB: 0.00357 (9%) | 200 OK [http://localhost/time_entries]
+
+
+Processing TimeEntriesController#index (for 127.0.0.1 at 2008-08-05 02:41:03) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlODFmOGY0OTdiNDEwY2FjODY3MTc4OTVjMWVjYjJl
+MTciCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7BjoLbm90aWNlIihUaW1lRW50cnkgd2FzIHN1Y2Nlc3NmdWxseSBjcmVh
+dGVkLgY6CkB1c2VkewY7B1Q=--9e7d8bac6f33d530c71c481245b96c9580934363
+  Parameters: {"action"=>"index", "controller"=>"time_entries"}
+  [4;36;1mTimeEntry Load (0.002425)[0m   [0;1mSELECT * FROM "time_entries" [0m
+Rendering template within layouts/time_entries
+Rendering time_entries/index
+Completed in 0.03737 (26 reqs/sec) | Rendering: 0.01454 (38%) | DB: 0.00242 (6%) | 200 OK [http://localhost/time_entries]
+
+
+Processing TimeEntriesController#create (for 127.0.0.1 at 2008-08-05 02:41:08) [POST]
+  Session ID: BAh7BzoMY3NyZl9pZCIlODFmOGY0OTdiNDEwY2FjODY3MTc4OTVjMWVjYjJl
+MTciCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--f72e148efb3a23ce73057ef21e84b07d4bd47c5f
+  Parameters: {"authenticity_token"=>"7d6b6d2f55b2b83b2400b31feab49d85929b0c4b", "_method"=>"POST", "action"=>"create", "controller"=>"time_entries"}
+  [4;35;1mTimeEntry Create (0.002389)[0m   [0mINSERT INTO "time_entries" ("updated_at", "start_time", "end_time", "created_at") VALUES('2008-08-05 09:41:08', '2008-08-05 09:41:08', NULL, '2008-08-05 09:41:08')[0m
+Redirected to http://localhost:3000/time_entries
+Completed in 0.04263 (23 reqs/sec) | DB: 0.00239 (5%) | 302 Found [http://localhost/time_entries]
+
+
+Processing TimeEntriesController#index (for 127.0.0.1 at 2008-08-05 02:41:08) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlODFmOGY0OTdiNDEwY2FjODY3MTc4OTVjMWVjYjJl
+MTciCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7BjoLbm90aWNlIihUaW1lRW50cnkgd2FzIHN1Y2Nlc3NmdWxseSBjcmVh
+dGVkLgY6CkB1c2VkewY7B0Y=--455b92784d5e0545163a0287024c2b3acd8e5d47
+  Parameters: {"action"=>"index", "controller"=>"time_entries"}
+  [4;36;1mTimeEntry Load (0.003470)[0m   [0;1mSELECT * FROM "time_entries" [0m
+Rendering template within layouts/time_entries
+Rendering time_entries/index
+Completed in 0.04244 (23 reqs/sec) | Rendering: 0.01739 (40%) | DB: 0.00347 (8%) | 200 OK [http://localhost/time_entries]
+
+
+Processing TimeEntriesController#index (for 127.0.0.1 at 2008-08-05 02:41:10) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlODFmOGY0OTdiNDEwY2FjODY3MTc4OTVjMWVjYjJl
+MTciCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7BjoLbm90aWNlIihUaW1lRW50cnkgd2FzIHN1Y2Nlc3NmdWxseSBjcmVh
+dGVkLgY6CkB1c2VkewY7B1Q=--9e7d8bac6f33d530c71c481245b96c9580934363
+  Parameters: {"action"=>"index", "controller"=>"time_entries"}
+  [4;35;1mTimeEntry Load (0.002621)[0m   [0mSELECT * FROM "time_entries" [0m
+Rendering template within layouts/time_entries
+Rendering time_entries/index
+Completed in 0.36909 (2 reqs/sec) | Rendering: 0.34324 (92%) | DB: 0.00262 (0%) | 200 OK [http://localhost/time_entries]
+
+
+Processing TimeEntriesController#create (for 127.0.0.1 at 2008-08-05 02:57:58) [POST]
+  Session ID: BAh7BzoMY3NyZl9pZCIlODFmOGY0OTdiNDEwY2FjODY3MTc4OTVjMWVjYjJl
+MTciCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--f72e148efb3a23ce73057ef21e84b07d4bd47c5f
+  Parameters: {"authenticity_token"=>"7d6b6d2f55b2b83b2400b31feab49d85929b0c4b", "_method"=>"POST", "action"=>"create", "controller"=>"time_entries"}
+  [4;36;1mTimeEntry Create (0.001637)[0m   [0;1mINSERT INTO "time_entries" ("updated_at", "start_time", "end_time", "created_at") VALUES('2008-08-05 09:57:59', '2008-08-05 09:57:58', NULL, '2008-08-05 09:57:59')[0m
+Redirected to http://localhost:3000/time_entries
+Completed in 0.03946 (25 reqs/sec) | DB: 0.00164 (4%) | 302 Found [http://localhost/time_entries]
+
+
+Processing TimeEntriesController#index (for 127.0.0.1 at 2008-08-05 02:57:59) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlODFmOGY0OTdiNDEwY2FjODY3MTc4OTVjMWVjYjJl
+MTciCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7BjoLbm90aWNlIihUaW1lRW50cnkgd2FzIHN1Y2Nlc3NmdWxseSBjcmVh
+dGVkLgY6CkB1c2VkewY7B0Y=--455b92784d5e0545163a0287024c2b3acd8e5d47
+  Parameters: {"action"=>"index", "controller"=>"time_entries"}
+  [4;35;1mTimeEntry Load (0.006603)[0m   [0mSELECT * FROM "time_entries" [0m
+Rendering template within layouts/time_entries
+Rendering time_entries/index
+Completed in 0.08419 (11 reqs/sec) | Rendering: 0.03889 (46%) | DB: 0.00660 (7%) | 200 OK [http://localhost/time_entries]
+
+
+Processing TimeEntriesController#index (for 127.0.0.1 at 2008-08-05 03:07:51) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlODFmOGY0OTdiNDEwY2FjODY3MTc4OTVjMWVjYjJl
+MTciCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7BjoLbm90aWNlIihUaW1lRW50cnkgd2FzIHN1Y2Nlc3NmdWxseSBjcmVh
+dGVkLgY6CkB1c2VkewY7B1Q=--9e7d8bac6f33d530c71c481245b96c9580934363
+  Parameters: {"action"=>"index", "controller"=>"time_entries"}
+  [4;36;1mTimeEntry Load (0.003448)[0m   [0;1mSELECT * FROM "time_entries" [0m
+Rendering template within layouts/time_entries
+Rendering time_entries/index
+Completed in 0.06112 (16 reqs/sec) | Rendering: 0.02351 (38%) | DB: 0.00345 (5%) | 200 OK [http://localhost/time_entries]
+
+
+Processing TimeEntriesController#update (for 127.0.0.1 at 2008-08-05 03:07:54) [PUT]
+  Session ID: BAh7BzoMY3NyZl9pZCIlODFmOGY0OTdiNDEwY2FjODY3MTc4OTVjMWVjYjJl
+MTciCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--f72e148efb3a23ce73057ef21e84b07d4bd47c5f
+  Parameters: {"authenticity_token"=>"7d6b6d2f55b2b83b2400b31feab49d85929b0c4b", "_method"=>"PUT", "action"=>"update", "id"=>"3", "controller"=>"time_entries"}
+  [4;35;1mTimeEntry Load (0.001401)[0m   [0mSELECT * FROM "time_entries" WHERE ("time_entries"."id" = 3) [0m
+  [4;36;1mTimeEntry Update (0.002466)[0m   [0;1mUPDATE "time_entries" SET "end_time" = '2008-08-05 10:07:54', "updated_at" = '2008-08-05 10:07:54' WHERE "id" = 3[0m
+Redirected to http://localhost:3000/time_entries/3
+Completed in 0.05499 (18 reqs/sec) | DB: 0.00387 (7%) | 302 Found [http://localhost/time_entries/3]
+
+
+Processing TimeEntriesController#show (for 127.0.0.1 at 2008-08-05 03:07:54) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlODFmOGY0OTdiNDEwY2FjODY3MTc4OTVjMWVjYjJl
+MTciCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7BjoLbm90aWNlIihUaW1lRW50cnkgd2FzIHN1Y2Nlc3NmdWxseSB1cGRh
+dGVkLgY6CkB1c2VkewY7B0Y=--c249cf9e03a90be30d0494c45134a186db482bc8
+  Parameters: {"action"=>"show", "id"=>"3", "controller"=>"time_entries"}
+  [4;35;1mTimeEntry Load (0.001407)[0m   [0mSELECT * FROM "time_entries" WHERE ("time_entries"."id" = 3) [0m
+Rendering template within layouts/time_entries
+Rendering time_entries/show
+Completed in 0.06259 (15 reqs/sec) | Rendering: 0.01719 (27%) | DB: 0.00141 (2%) | 200 OK [http://localhost/time_entries/3]
+
+
+Processing TimeEntriesController#index (for 127.0.0.1 at 2008-08-05 03:08:52) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlODFmOGY0OTdiNDEwY2FjODY3MTc4OTVjMWVjYjJl
+MTciCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7BjoLbm90aWNlIihUaW1lRW50cnkgd2FzIHN1Y2Nlc3NmdWxseSB1cGRh
+dGVkLgY6CkB1c2VkewY7B1Q=--9f413fa5f0fc46ff7a9d3e9ab5e3017662c002cd
+  Parameters: {"action"=>"index", "controller"=>"time_entries"}
+  [4;36;1mTimeEntry Load (0.003119)[0m   [0;1mSELECT * FROM "time_entries" [0m
+Rendering template within layouts/time_entries
+Rendering time_entries/index
+Completed in 0.04521 (22 reqs/sec) | Rendering: 0.01777 (39%) | DB: 0.00312 (6%) | 200 OK [http://localhost/time_entries]
+
+
+Processing TimeEntriesController#update (for 127.0.0.1 at 2008-08-05 03:08:58) [PUT]
+  Session ID: BAh7BzoMY3NyZl9pZCIlODFmOGY0OTdiNDEwY2FjODY3MTc4OTVjMWVjYjJl
+MTciCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--f72e148efb3a23ce73057ef21e84b07d4bd47c5f
+  Parameters: {"authenticity_token"=>"7d6b6d2f55b2b83b2400b31feab49d85929b0c4b", "_method"=>"PUT", "action"=>"update", "id"=>"4", "controller"=>"time_entries"}
+  [4;35;1mTimeEntry Load (0.001248)[0m   [0mSELECT * FROM "time_entries" WHERE ("time_entries"."id" = 4) [0m
+  [4;36;1mTimeEntry Update (0.003127)[0m   [0;1mUPDATE "time_entries" SET "end_time" = '2008-08-05 10:08:58', "updated_at" = '2008-08-05 10:08:58' WHERE "id" = 4[0m
+Redirected to http://localhost:3000/time_entries
+Completed in 0.04618 (21 reqs/sec) | DB: 0.00438 (9%) | 302 Found [http://localhost/time_entries/4]
+
+
+Processing TimeEntriesController#index (for 127.0.0.1 at 2008-08-05 03:08:59) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlODFmOGY0OTdiNDEwY2FjODY3MTc4OTVjMWVjYjJl
+MTciCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7BjoLbm90aWNlIihUaW1lRW50cnkgd2FzIHN1Y2Nlc3NmdWxseSB1cGRh
+dGVkLgY6CkB1c2VkewY7B0Y=--c249cf9e03a90be30d0494c45134a186db482bc8
+  Parameters: {"action"=>"index", "controller"=>"time_entries"}
+  [4;35;1mTimeEntry Load (0.003000)[0m   [0mSELECT * FROM "time_entries" [0m
+Rendering template within layouts/time_entries
+Rendering time_entries/index
+Completed in 0.05022 (19 reqs/sec) | Rendering: 0.02071 (41%) | DB: 0.00300 (5%) | 200 OK [http://localhost/time_entries]
+
+
+Processing TimeEntriesController#update (for 127.0.0.1 at 2008-08-05 03:09:02) [PUT]
+  Session ID: BAh7BzoMY3NyZl9pZCIlODFmOGY0OTdiNDEwY2FjODY3MTc4OTVjMWVjYjJl
+MTciCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7BjoLbm90aWNlIihUaW1lRW50cnkgd2FzIHN1Y2Nlc3NmdWxseSB1cGRh
+dGVkLgY6CkB1c2VkewY7B1Q=--9f413fa5f0fc46ff7a9d3e9ab5e3017662c002cd
+  Parameters: {"authenticity_token"=>"7d6b6d2f55b2b83b2400b31feab49d85929b0c4b", "_method"=>"PUT", "action"=>"update", "id"=>"5", "controller"=>"time_entries"}
+  [4;36;1mTimeEntry Load (0.001239)[0m   [0;1mSELECT * FROM "time_entries" WHERE ("time_entries"."id" = 5) [0m
+  [4;35;1mTimeEntry Update (0.001691)[0m   [0mUPDATE "time_entries" SET "end_time" = '2008-08-05 10:09:02', "updated_at" = '2008-08-05 10:09:02' WHERE "id" = 5[0m
+Redirected to http://localhost:3000/time_entries
+Completed in 0.04900 (20 reqs/sec) | DB: 0.00293 (5%) | 302 Found [http://localhost/time_entries/5]
+
+
+Processing TimeEntriesController#index (for 127.0.0.1 at 2008-08-05 03:09:02) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlODFmOGY0OTdiNDEwY2FjODY3MTc4OTVjMWVjYjJl
+MTciCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7BjoLbm90aWNlIihUaW1lRW50cnkgd2FzIHN1Y2Nlc3NmdWxseSB1cGRh
+dGVkLgY6CkB1c2VkewY7B0Y=--c249cf9e03a90be30d0494c45134a186db482bc8
+  Parameters: {"action"=>"index", "controller"=>"time_entries"}
+  [4;36;1mTimeEntry Load (0.005130)[0m   [0;1mSELECT * FROM "time_entries" [0m
+Rendering template within layouts/time_entries
+Rendering time_entries/index
+Completed in 0.06599 (15 reqs/sec) | Rendering: 0.02603 (39%) | DB: 0.00513 (7%) | 200 OK [http://localhost/time_entries]
+
+
+Processing TimeEntriesController#create (for 127.0.0.1 at 2008-08-05 03:09:14) [POST]
+  Session ID: BAh7BzoMY3NyZl9pZCIlODFmOGY0OTdiNDEwY2FjODY3MTc4OTVjMWVjYjJl
+MTciCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7BjoLbm90aWNlIihUaW1lRW50cnkgd2FzIHN1Y2Nlc3NmdWxseSB1cGRh
+dGVkLgY6CkB1c2VkewY7B1Q=--9f413fa5f0fc46ff7a9d3e9ab5e3017662c002cd
+  Parameters: {"authenticity_token"=>"7d6b6d2f55b2b83b2400b31feab49d85929b0c4b", "_method"=>"POST", "action"=>"create", "controller"=>"time_entries"}
+  [4;35;1mTimeEntry Create (0.001621)[0m   [0mINSERT INTO "time_entries" ("updated_at", "start_time", "end_time", "created_at") VALUES('2008-08-05 10:09:14', '2008-08-05 10:09:14', NULL, '2008-08-05 10:09:14')[0m
+Redirected to http://localhost:3000/time_entries
+Completed in 0.03759 (26 reqs/sec) | DB: 0.00162 (4%) | 302 Found [http://localhost/time_entries]
+
+
+Processing TimeEntriesController#index (for 127.0.0.1 at 2008-08-05 03:09:14) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlODFmOGY0OTdiNDEwY2FjODY3MTc4OTVjMWVjYjJl
+MTciCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7BjoLbm90aWNlIihUaW1lRW50cnkgd2FzIHN1Y2Nlc3NmdWxseSBjcmVh
+dGVkLgY6CkB1c2VkewY7B0Y=--455b92784d5e0545163a0287024c2b3acd8e5d47
+  Parameters: {"action"=>"index", "controller"=>"time_entries"}
+  [4;36;1mTimeEntry Load (0.003295)[0m   [0;1mSELECT * FROM "time_entries" [0m
+Rendering template within layouts/time_entries
+Rendering time_entries/index
+Completed in 0.07674 (13 reqs/sec) | Rendering: 0.02733 (35%) | DB: 0.00329 (4%) | 200 OK [http://localhost/time_entries]
+
+
+Processing TimeEntriesController#create (for 127.0.0.1 at 2008-08-05 03:09:18) [POST]
+  Session ID: BAh7BzoMY3NyZl9pZCIlODFmOGY0OTdiNDEwY2FjODY3MTc4OTVjMWVjYjJl
+MTciCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7BjoLbm90aWNlIihUaW1lRW50cnkgd2FzIHN1Y2Nlc3NmdWxseSBjcmVh
+dGVkLgY6CkB1c2VkewY7B1Q=--9e7d8bac6f33d530c71c481245b96c9580934363
+  Parameters: {"authenticity_token"=>"7d6b6d2f55b2b83b2400b31feab49d85929b0c4b", "_method"=>"POST", "action"=>"create", "controller"=>"time_entries"}
+  [4;35;1mTimeEntry Create (0.001469)[0m   [0mINSERT INTO "time_entries" ("updated_at", "start_time", "end_time", "created_at") VALUES('2008-08-05 10:09:18', '2008-08-05 10:09:18', NULL, '2008-08-05 10:09:18')[0m
+Redirected to http://localhost:3000/time_entries
+Completed in 0.07236 (13 reqs/sec) | DB: 0.00147 (2%) | 302 Found [http://localhost/time_entries]
+
+
+Processing TimeEntriesController#index (for 127.0.0.1 at 2008-08-05 03:09:18) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlODFmOGY0OTdiNDEwY2FjODY3MTc4OTVjMWVjYjJl
+MTciCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7BjoLbm90aWNlIihUaW1lRW50cnkgd2FzIHN1Y2Nlc3NmdWxseSBjcmVh
+dGVkLgY6CkB1c2VkewY7B0Y=--455b92784d5e0545163a0287024c2b3acd8e5d47
+  Parameters: {"action"=>"index", "controller"=>"time_entries"}
+  [4;36;1mTimeEntry Load (0.022904)[0m   [0;1mSELECT * FROM "time_entries" [0m
+Rendering template within layouts/time_entries
+Rendering time_entries/index
+Completed in 0.08064 (12 reqs/sec) | Rendering: 0.03154 (39%) | DB: 0.02290 (28%) | 200 OK [http://localhost/time_entries]
+
+
+Processing TimeEntriesController#update (for 127.0.0.1 at 2008-08-05 03:09:19) [PUT]
+  Session ID: BAh7BzoMY3NyZl9pZCIlODFmOGY0OTdiNDEwY2FjODY3MTc4OTVjMWVjYjJl
+MTciCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7BjoLbm90aWNlIihUaW1lRW50cnkgd2FzIHN1Y2Nlc3NmdWxseSBjcmVh
+dGVkLgY6CkB1c2VkewY7B1Q=--9e7d8bac6f33d530c71c481245b96c9580934363
+  Parameters: {"authenticity_token"=>"7d6b6d2f55b2b83b2400b31feab49d85929b0c4b", "_method"=>"PUT", "action"=>"update", "id"=>"7", "controller"=>"time_entries"}
+  [4;35;1mTimeEntry Load (0.001411)[0m   [0mSELECT * FROM "time_entries" WHERE ("time_entries"."id" = 7) [0m
+  [4;36;1mTimeEntry Update (0.003275)[0m   [0;1mUPDATE "time_entries" SET "end_time" = '2008-08-05 10:09:20', "updated_at" = '2008-08-05 10:09:20' WHERE "id" = 7[0m
+Redirected to http://localhost:3000/time_entries
+Completed in 0.46436 (2 reqs/sec) | DB: 0.00469 (1%) | 302 Found [http://localhost/time_entries/7]
+
+
+Processing TimeEntriesController#index (for 127.0.0.1 at 2008-08-05 03:09:20) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlODFmOGY0OTdiNDEwY2FjODY3MTc4OTVjMWVjYjJl
+MTciCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7BjoLbm90aWNlIihUaW1lRW50cnkgd2FzIHN1Y2Nlc3NmdWxseSB1cGRh
+dGVkLgY6CkB1c2VkewY7B0Y=--c249cf9e03a90be30d0494c45134a186db482bc8
+  Parameters: {"action"=>"index", "controller"=>"time_entries"}
+  [4;35;1mTimeEntry Load (0.003603)[0m   [0mSELECT * FROM "time_entries" [0m
+Rendering template within layouts/time_entries
+Rendering time_entries/index
+Completed in 0.05429 (18 reqs/sec) | Rendering: 0.02107 (38%) | DB: 0.00360 (6%) | 200 OK [http://localhost/time_entries]
+
+
+Processing TimeEntriesController#update (for 127.0.0.1 at 2008-08-05 03:09:22) [PUT]
+  Session ID: BAh7BzoMY3NyZl9pZCIlODFmOGY0OTdiNDEwY2FjODY3MTc4OTVjMWVjYjJl
+MTciCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7BjoLbm90aWNlIihUaW1lRW50cnkgd2FzIHN1Y2Nlc3NmdWxseSB1cGRh
+dGVkLgY6CkB1c2VkewY7B1Q=--9f413fa5f0fc46ff7a9d3e9ab5e3017662c002cd
+  Parameters: {"authenticity_token"=>"7d6b6d2f55b2b83b2400b31feab49d85929b0c4b", "_method"=>"PUT", "action"=>"update", "id"=>"6", "controller"=>"time_entries"}
+  [4;36;1mTimeEntry Load (0.001464)[0m   [0;1mSELECT * FROM "time_entries" WHERE ("time_entries"."id" = 6) [0m
+  [4;35;1mTimeEntry Update (0.001525)[0m   [0mUPDATE "time_entries" SET "end_time" = '2008-08-05 10:09:22', "updated_at" = '2008-08-05 10:09:22' WHERE "id" = 6[0m
+Redirected to http://localhost:3000/time_entries
+Completed in 0.10852 (9 reqs/sec) | DB: 0.00299 (2%) | 302 Found [http://localhost/time_entries/6]
+
+
+Processing TimeEntriesController#index (for 127.0.0.1 at 2008-08-05 03:09:22) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlODFmOGY0OTdiNDEwY2FjODY3MTc4OTVjMWVjYjJl
+MTciCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7BjoLbm90aWNlIihUaW1lRW50cnkgd2FzIHN1Y2Nlc3NmdWxseSB1cGRh
+dGVkLgY6CkB1c2VkewY7B0Y=--c249cf9e03a90be30d0494c45134a186db482bc8
+  Parameters: {"action"=>"index", "controller"=>"time_entries"}
+  [4;36;1mTimeEntry Load (0.006030)[0m   [0;1mSELECT * FROM "time_entries" [0m
+Rendering template within layouts/time_entries
+Rendering time_entries/index
+Completed in 0.05588 (17 reqs/sec) | Rendering: 0.02334 (41%) | DB: 0.00603 (10%) | 200 OK [http://localhost/time_entries]
+
+
+Processing TimeEntriesController#create (for 127.0.0.1 at 2008-08-05 03:09:36) [POST]
+  Session ID: BAh7BzoMY3NyZl9pZCIlODFmOGY0OTdiNDEwY2FjODY3MTc4OTVjMWVjYjJl
+MTciCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7BjoLbm90aWNlIihUaW1lRW50cnkgd2FzIHN1Y2Nlc3NmdWxseSB1cGRh
+dGVkLgY6CkB1c2VkewY7B1Q=--9f413fa5f0fc46ff7a9d3e9ab5e3017662c002cd
+  Parameters: {"authenticity_token"=>"7d6b6d2f55b2b83b2400b31feab49d85929b0c4b", "_method"=>"POST", "action"=>"create", "controller"=>"time_entries"}
+  [4;35;1mTimeEntry Create (0.002845)[0m   [0mINSERT INTO "time_entries" ("updated_at", "start_time", "end_time", "created_at") VALUES('2008-08-05 10:09:36', '2008-08-05 10:09:36', NULL, '2008-08-05 10:09:36')[0m
+Redirected to http://localhost:3000/time_entries
+Completed in 0.08250 (12 reqs/sec) | DB: 0.00285 (3%) | 302 Found [http://localhost/time_entries]
+
+
+Processing TimeEntriesController#index (for 127.0.0.1 at 2008-08-05 03:09:36) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlODFmOGY0OTdiNDEwY2FjODY3MTc4OTVjMWVjYjJl
+MTciCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7BjoLbm90aWNlIihUaW1lRW50cnkgd2FzIHN1Y2Nlc3NmdWxseSBjcmVh
+dGVkLgY6CkB1c2VkewY7B0Y=--455b92784d5e0545163a0287024c2b3acd8e5d47
+  Parameters: {"action"=>"index", "controller"=>"time_entries"}
+  [4;36;1mTimeEntry Load (0.004148)[0m   [0;1mSELECT * FROM "time_entries" [0m
+Rendering template within layouts/time_entries
+Rendering time_entries/index
+Completed in 0.06974 (14 reqs/sec) | Rendering: 0.04363 (62%) | DB: 0.00415 (5%) | 200 OK [http://localhost/time_entries]
+
+
+Processing TimeEntriesController#create (for 127.0.0.1 at 2008-08-05 03:09:55) [POST]
+  Session ID: BAh7BzoMY3NyZl9pZCIlODFmOGY0OTdiNDEwY2FjODY3MTc4OTVjMWVjYjJl
+MTciCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7BjoLbm90aWNlIihUaW1lRW50cnkgd2FzIHN1Y2Nlc3NmdWxseSBjcmVh
+dGVkLgY6CkB1c2VkewY7B1Q=--9e7d8bac6f33d530c71c481245b96c9580934363
+  Parameters: {"authenticity_token"=>"7d6b6d2f55b2b83b2400b31feab49d85929b0c4b", "_method"=>"POST", "action"=>"create", "controller"=>"time_entries"}
+  [4;35;1mTimeEntry Create (0.002922)[0m   [0mINSERT INTO "time_entries" ("updated_at", "start_time", "end_time", "created_at") VALUES('2008-08-05 10:09:55', '2008-08-05 10:09:55', NULL, '2008-08-05 10:09:55')[0m
+Redirected to http://localhost:3000/time_entries
+Completed in 0.09169 (10 reqs/sec) | DB: 0.00292 (3%) | 302 Found [http://localhost/time_entries]
+
+
+Processing TimeEntriesController#index (for 127.0.0.1 at 2008-08-05 03:09:55) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlODFmOGY0OTdiNDEwY2FjODY3MTc4OTVjMWVjYjJl
+MTciCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7BjoLbm90aWNlIihUaW1lRW50cnkgd2FzIHN1Y2Nlc3NmdWxseSBjcmVh
+dGVkLgY6CkB1c2VkewY7B0Y=--455b92784d5e0545163a0287024c2b3acd8e5d47
+  Parameters: {"action"=>"index", "controller"=>"time_entries"}
+  [4;36;1mTimeEntry Load (0.003895)[0m   [0;1mSELECT * FROM "time_entries" [0m
+Rendering template within layouts/time_entries
+Rendering time_entries/index
+Completed in 0.39332 (2 reqs/sec) | Rendering: 0.37130 (94%) | DB: 0.00390 (0%) | 200 OK [http://localhost/time_entries]
+
+
+Processing TimeEntriesController#create (for 127.0.0.1 at 2008-08-05 03:09:57) [POST]
+  Session ID: BAh7BzoMY3NyZl9pZCIlODFmOGY0OTdiNDEwY2FjODY3MTc4OTVjMWVjYjJl
+MTciCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7BjoLbm90aWNlIihUaW1lRW50cnkgd2FzIHN1Y2Nlc3NmdWxseSBjcmVh
+dGVkLgY6CkB1c2VkewY7B1Q=--9e7d8bac6f33d530c71c481245b96c9580934363
+  Parameters: {"authenticity_token"=>"7d6b6d2f55b2b83b2400b31feab49d85929b0c4b", "_method"=>"POST", "action"=>"create", "controller"=>"time_entries"}
+  [4;35;1mTimeEntry Create (0.001427)[0m   [0mINSERT INTO "time_entries" ("updated_at", "start_time", "end_time", "created_at") VALUES('2008-08-05 10:09:57', '2008-08-05 10:09:57', NULL, '2008-08-05 10:09:57')[0m
+Redirected to http://localhost:3000/time_entries
+Completed in 0.05462 (18 reqs/sec) | DB: 0.00143 (2%) | 302 Found [http://localhost/time_entries]
+
+
+Processing TimeEntriesController#index (for 127.0.0.1 at 2008-08-05 03:09:58) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlODFmOGY0OTdiNDEwY2FjODY3MTc4OTVjMWVjYjJl
+MTciCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7BjoLbm90aWNlIihUaW1lRW50cnkgd2FzIHN1Y2Nlc3NmdWxseSBjcmVh
+dGVkLgY6CkB1c2VkewY7B0Y=--455b92784d5e0545163a0287024c2b3acd8e5d47
+  Parameters: {"action"=>"index", "controller"=>"time_entries"}
+  [4;36;1mTimeEntry Load (0.004361)[0m   [0;1mSELECT * FROM "time_entries" [0m
+Rendering template within layouts/time_entries
+Rendering time_entries/index
+Completed in 0.15945 (6 reqs/sec) | Rendering: 0.04883 (30%) | DB: 0.00436 (2%) | 200 OK [http://localhost/time_entries]
+
+
+Processing TimeEntriesController#update (for 127.0.0.1 at 2008-08-05 03:10:01) [PUT]
+  Session ID: BAh7BzoMY3NyZl9pZCIlODFmOGY0OTdiNDEwY2FjODY3MTc4OTVjMWVjYjJl
+MTciCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7BjoLbm90aWNlIihUaW1lRW50cnkgd2FzIHN1Y2Nlc3NmdWxseSBjcmVh
+dGVkLgY6CkB1c2VkewY7B1Q=--9e7d8bac6f33d530c71c481245b96c9580934363
+  Parameters: {"authenticity_token"=>"7d6b6d2f55b2b83b2400b31feab49d85929b0c4b", "_method"=>"PUT", "action"=>"update", "id"=>"9", "controller"=>"time_entries"}
+  [4;35;1mTimeEntry Load (0.001253)[0m   [0mSELECT * FROM "time_entries" WHERE ("time_entries"."id" = 9) [0m
+  [4;36;1mTimeEntry Update (0.001338)[0m   [0;1mUPDATE "time_entries" SET "end_time" = '2008-08-05 10:10:01', "updated_at" = '2008-08-05 10:10:01' WHERE "id" = 9[0m
+Redirected to http://localhost:3000/time_entries
+Completed in 0.04566 (21 reqs/sec) | DB: 0.00259 (5%) | 302 Found [http://localhost/time_entries/9]
+
+
+Processing TimeEntriesController#index (for 127.0.0.1 at 2008-08-05 03:10:02) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlODFmOGY0OTdiNDEwY2FjODY3MTc4OTVjMWVjYjJl
+MTciCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7BjoLbm90aWNlIihUaW1lRW50cnkgd2FzIHN1Y2Nlc3NmdWxseSB1cGRh
+dGVkLgY6CkB1c2VkewY7B0Y=--c249cf9e03a90be30d0494c45134a186db482bc8
+  Parameters: {"action"=>"index", "controller"=>"time_entries"}
+  [4;35;1mTimeEntry Load (0.004442)[0m   [0mSELECT * FROM "time_entries" [0m
+Rendering template within layouts/time_entries
+Rendering time_entries/index
+Completed in 0.06674 (14 reqs/sec) | Rendering: 0.04291 (64%) | DB: 0.00444 (6%) | 200 OK [http://localhost/time_entries]
+
+
+Processing TimeEntriesController#update (for 127.0.0.1 at 2008-08-05 03:10:04) [PUT]
+  Session ID: BAh7BzoMY3NyZl9pZCIlODFmOGY0OTdiNDEwY2FjODY3MTc4OTVjMWVjYjJl
+MTciCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7BjoLbm90aWNlIihUaW1lRW50cnkgd2FzIHN1Y2Nlc3NmdWxseSB1cGRh
+dGVkLgY6CkB1c2VkewY7B1Q=--9f413fa5f0fc46ff7a9d3e9ab5e3017662c002cd
+  Parameters: {"authenticity_token"=>"7d6b6d2f55b2b83b2400b31feab49d85929b0c4b", "_method"=>"PUT", "action"=>"update", "id"=>"10", "controller"=>"time_entries"}
+  [4;36;1mTimeEntry Load (0.001336)[0m   [0;1mSELECT * FROM "time_entries" WHERE ("time_entries"."id" = 10) [0m
+  [4;35;1mTimeEntry Update (0.009516)[0m   [0mUPDATE "time_entries" SET "end_time" = '2008-08-05 10:10:04', "updated_at" = '2008-08-05 10:10:04' WHERE "id" = 10[0m
+Redirected to http://localhost:3000/time_entries
+Completed in 0.06258 (15 reqs/sec) | DB: 0.01085 (17%) | 302 Found [http://localhost/time_entries/10]
+
+
+Processing TimeEntriesController#index (for 127.0.0.1 at 2008-08-05 03:10:04) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlODFmOGY0OTdiNDEwY2FjODY3MTc4OTVjMWVjYjJl
+MTciCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7BjoLbm90aWNlIihUaW1lRW50cnkgd2FzIHN1Y2Nlc3NmdWxseSB1cGRh
+dGVkLgY6CkB1c2VkewY7B0Y=--c249cf9e03a90be30d0494c45134a186db482bc8
+  Parameters: {"action"=>"index", "controller"=>"time_entries"}
+  [4;36;1mTimeEntry Load (0.004526)[0m   [0;1mSELECT * FROM "time_entries" [0m
+Rendering template within layouts/time_entries
+Rendering time_entries/index
+Completed in 0.05224 (19 reqs/sec) | Rendering: 0.02709 (51%) | DB: 0.00453 (8%) | 200 OK [http://localhost/time_entries]
+
+
+Processing TimeEntriesController#update (for 127.0.0.1 at 2008-08-05 03:10:06) [PUT]
+  Session ID: BAh7BzoMY3NyZl9pZCIlODFmOGY0OTdiNDEwY2FjODY3MTc4OTVjMWVjYjJl
+MTciCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7BjoLbm90aWNlIihUaW1lRW50cnkgd2FzIHN1Y2Nlc3NmdWxseSB1cGRh
+dGVkLgY6CkB1c2VkewY7B1Q=--9f413fa5f0fc46ff7a9d3e9ab5e3017662c002cd
+  Parameters: {"authenticity_token"=>"7d6b6d2f55b2b83b2400b31feab49d85929b0c4b", "_method"=>"PUT", "action"=>"update", "id"=>"8", "controller"=>"time_entries"}
+  [4;35;1mTimeEntry Load (0.001414)[0m   [0mSELECT * FROM "time_entries" WHERE ("time_entries"."id" = 8) [0m
+  [4;36;1mTimeEntry Update (0.002840)[0m   [0;1mUPDATE "time_entries" SET "end_time" = '2008-08-05 10:10:06', "updated_at" = '2008-08-05 10:10:06' WHERE "id" = 8[0m
+Redirected to http://localhost:3000/time_entries
+Completed in 0.08057 (12 reqs/sec) | DB: 0.00425 (5%) | 302 Found [http://localhost/time_entries/8]
+
+
+Processing TimeEntriesController#index (for 127.0.0.1 at 2008-08-05 03:10:07) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlODFmOGY0OTdiNDEwY2FjODY3MTc4OTVjMWVjYjJl
+MTciCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7BjoLbm90aWNlIihUaW1lRW50cnkgd2FzIHN1Y2Nlc3NmdWxseSB1cGRh
+dGVkLgY6CkB1c2VkewY7B0Y=--c249cf9e03a90be30d0494c45134a186db482bc8
+  Parameters: {"action"=>"index", "controller"=>"time_entries"}
+  [4;35;1mTimeEntry Load (0.008216)[0m   [0mSELECT * FROM "time_entries" [0m
+Rendering template within layouts/time_entries
+Rendering time_entries/index
+Completed in 0.09369 (10 reqs/sec) | Rendering: 0.03088 (32%) | DB: 0.00822 (8%) | 200 OK [http://localhost/time_entries]

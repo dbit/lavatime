@@ -1,0 +1,19 @@
+<h1>New time_entry</h1>
+
+<% form_for(@time_entry) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :start_time %><br />
+    <%= f.datetime_select :start_time %>
+  </p>
+  <p>
+    <%= f.label :end_time %><br />
+    <%= f.datetime_select :end_time %>
+  </p>
+  <p>
+    <%= f.submit "Create" %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', time_entries_path %>
