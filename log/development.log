@@ -698,3 +698,28 @@ ActionController::RoutingError (No route matches "/users/6" with {:method=>:get}
     script/server:3
 
 Rendering /opt/local/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/templates/rescues/layout.erb (not_found)
+  [4;36;1mSQL (0.004555)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.001193)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateTimeEntries (20080805081753)
+  [4;36;1mSQL (0.001106)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20080805115341)
+  [4;35;1mSQL (0.000882)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000842)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.001351)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.004780)[0m   [0;1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "login" varchar(40) DEFAULT NULL NULL, "name" varchar(100) DEFAULT '' NULL, "email" varchar(100) DEFAULT NULL NULL, "crypted_password" varchar(40) DEFAULT NULL NULL, "salt" varchar(40) DEFAULT NULL NULL, "created_at" datetime DEFAULT NULL NULL, "updated_at" datetime DEFAULT NULL NULL, "remember_token" varchar(40) DEFAULT NULL NULL, "remember_token_expires_at" datetime DEFAULT NULL NULL) [0m
+  [4;35;1mSQL (0.005014)[0m   [0mCREATE UNIQUE INDEX "index_users_on_login" ON "users" ("login")[0m
+  [4;36;1mSQL (0.004073)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20080805115341')[0m
+  [4;35;1mSQL (0.001370)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.002208)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000259)[0m   [0mPRAGMA index_list("time_entries")[0m
+  [4;36;1mSQL (0.000831)[0m   [0;1mPRAGMA index_list("users")[0m
+  [4;35;1mSQL (0.001098)[0m   [0mPRAGMA index_info('index_users_on_login')[0m

@@ -28,6 +28,7 @@ ruby script/server
 
 # Install Rspec
 # From: http://github.com/dchelimsky/rspec-rails/wikis/home
+# Also see rspec.info for more info about RSpec.
 
 cd vendor/plugins
 git clone git://github.com/dchelimsky/rspec.git
@@ -55,4 +56,20 @@ git push origin master
 cd vendor/plugins
 git clone git://github.com/technoweenie/restful-authentication.git
 cd restful-authentication
-git checkout 
+git co master
+cd ../..
+git add .
+gc -m 'installed restful_authentication plugin'
+
+# Update github.com server
+git push origin master 
+
+# Run the generator for restful_authentication to generate the User and Session models.
+./script/generate authenticated user sessions --rspec
+
+# Run the migration to create the `users` table:
+rake db:migrate
+
+
+
+
