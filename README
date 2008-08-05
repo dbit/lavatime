@@ -1,6 +1,8 @@
-LavaTime is a Rails 2.1 application that tracks how much time hourly workers spend on projects.  It was originally written by and for a web development company called LavaFire, Inc (http://www.lavafireinc.com) to track projects, tasks, and the amount of time each worker spends on each task.  This information can be used for computing payroll, invoices to clients, and employee performance reports based on hour estimats and due dates of tasks and projects.  
-
 LavaTime is intended to be general time tracking and project management software.  We welcome your comments, feedback and commits.
 
-Feel free to email me if you would like to help out.  David Beckwith (dbitsolutions@gmail.com).
+LavaTime is a Rails 2.1 application that tracks how much time hourly workers spend on projects.  It was originally written by and for a web development company called LavaFire, Inc (http://www.lavafireinc.com) to track projects, tasks, and the amount of time each worker spends on each task.  This information can be used for computing payroll, invoices to clients, and employee performance reports based on hour estimates and due dates of projects and tasks.
+
+We have an existing Rails 1.2 legacy version of this software (in production).  We are rewriting this old version as open source project Rails 2.1 project.  The Rails 1.2 code is currently not publicly available.
+
+Feel free to email me David Beckwith (dbitsolutions@gmail.com) if you have a suggestion or would like to help out.  I'm very interested in making this software useful for people and companies.
 

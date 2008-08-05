@@ -1,0 +1,7 @@
+# Download Rails 2.1
+sudo gem install rails
+
+# Generate a default rails 2.1 application
+rails lava_time
+
+# Using the built-in code generators make a time_entry table.
