@@ -1,0 +1,7 @@
+<%= link_to 'My Time Entries', time_entries_path %>
+<% if logged_in? %>
+| <%= link_to 'Logout', logout_path %>
+<% else %>
+| <%= link_to 'Signup', signup_path %>
+| <%= link_to 'Login', login_path %>
+<% end %>

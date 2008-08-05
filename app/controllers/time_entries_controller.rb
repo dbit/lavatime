@@ -1,4 +1,5 @@
 class TimeEntriesController < ApplicationController
+  layout 'application'
   # GET /time_entries
   # GET /time_entries.xml
   def index
