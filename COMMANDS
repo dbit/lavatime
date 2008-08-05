@@ -70,6 +70,51 @@ git push origin master
 # Run the migration to create the `users` table:
 rake db:migrate
 
+# Move this line of code into the ApplicationController.
+include AuthenticatedSystem
+
+# Restart the web server cuz the web server only reads ApplicationController once during start up.
+
+# In the User model: 
+has_many :time_entries
+
+# In the TimeEntry model:
+belongs_to :user
+
+# in the TimeEntriesController's index action:
+@time_entries = current_user.time_entries
+
+# Generate a migration file to add the :user_id field to TimeEntries
+script/generate migration TimeEntryBelongsToUser
+
+# Inside the migration file db/20080805120650_time_entry_belongs_to_user.rb, in self.up definition:
+change_table :time_entries do |t|
+  t.integer :user_id
+end
+
+# and in self.down
+change_table :time_entries do |t|
+  t.remove :user_id
+end
+
+# Run the migration.
+rake db:migrate
+
+# In TimeEntriesController in the create action and update action:
+@time_entry.user_id = current_user.id if logged_in?
+
+
+# Restart the web server.
+ruby script/server -p 3000
+
+
+
+
+
+
+
+
+
 
 
 
